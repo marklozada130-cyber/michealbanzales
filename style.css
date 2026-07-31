@@ -240,6 +240,7 @@ body {
   color: var(--accent-blue);
 }
 
+/* Full-width stretch for stats card sitting below hero-grid */
 .hero-stats-row {
   width: 100%;
   margin-top: 2.5rem;
