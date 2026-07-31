@@ -34,7 +34,7 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Reveal Animations */
+/* Scroll reveal animations */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -81,7 +81,7 @@ body {
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
-  margin-left: 2rem;
+  margin-left: 1.8rem;
   font-size: 0.9rem;
   font-weight: 500;
   position: relative;
@@ -190,7 +190,7 @@ body {
   background-color: var(--bg-card-hover);
 }
 
-/* Hero Sidebar */
+/* Sidebar Contact Info */
 .hero-sidebar {
   display: flex;
   flex-direction: column;
@@ -245,33 +245,37 @@ body {
   color: var(--accent-blue);
 }
 
-/* Full-Width Stat Impact Banner (Positioned right below the hero layout) */
-.hero-stats-banner {
+/* Relocated Hero Stats Block (Below Hero Grid) */
+.hero-stats-row {
+  width: 100%;
+}
+
+.stat-card {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 3rem;
+  justify-content: space-between;
+  max-width: 520px;
   background-color: var(--bg-card);
-  padding: 1.5rem 2.25rem;
+  padding: 1.25rem 2rem;
   border-radius: 10px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.hero-stats-banner:hover {
+.stat-card:hover {
   border-color: var(--accent-blue);
   transform: translateY(-2px);
 }
 
-.stat-box {
+.stat-item {
   display: flex;
   flex-direction: column;
 }
 
 .stat-divider {
   width: 1px;
-  height: 38px;
+  height: 36px;
   background-color: var(--border-color);
 }
 
@@ -288,7 +292,7 @@ body {
 }
 
 .stat-label {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -498,14 +502,14 @@ footer {
 @media (max-width: 768px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   
-  .hero-stats-banner {
+  .stat-card {
+    max-width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.25rem;
+    gap: 1rem;
   }
 
   .stat-divider {
