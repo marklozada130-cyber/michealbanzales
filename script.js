@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide Icons
   lucide.createIcons();
 
-  // Scroll Reveal Logic
   const revealElements = document.querySelectorAll('.reveal');
   
   const revealOnScroll = () => {
@@ -16,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Trigger immediately on load
+  revealOnScroll();
 });
