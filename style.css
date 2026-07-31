@@ -244,7 +244,7 @@ body {
   color: var(--accent-blue);
 }
 
-/* Impact Stats Row (Strict Horizontal Alignment Fix) */
+/* Impact Stats Row (Explicit Horizontal Layout Across Full Width) */
 .hero-stats-row {
   width: 100%;
   margin-top: 2.5rem;
@@ -255,7 +255,8 @@ body {
   flex-direction: row !important;
   align-items: center !important;
   justify-content: space-around !important;
-  max-width: 580px;
+  width: 100%;
+  max-width: 620px;
   background-color: var(--bg-card);
   padding: 1.25rem 2rem;
   border-radius: 10px;
@@ -273,14 +274,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1;
 }
 
 .stat-divider {
   width: 1px;
   height: 36px;
   background-color: var(--border-color);
-  margin: 0 1.25rem;
+  margin: 0 1rem;
   flex-shrink: 0;
 }
 
