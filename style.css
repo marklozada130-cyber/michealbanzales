@@ -109,7 +109,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 4.5rem 0 3.5rem 0;
+  padding: 4.5rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -118,7 +118,6 @@ body {
   grid-template-columns: 1.8fr 1fr;
   gap: 3rem;
   align-items: start;
-  margin-bottom: 3rem;
 }
 
 .accent-line {
@@ -150,6 +149,7 @@ body {
 .cta-group {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .btn {
@@ -190,43 +190,36 @@ body {
   background-color: var(--bg-card-hover);
 }
 
-/* Full-Width Maximized Hero Stats Bar */
-.hero-stats-full {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+/* Inline Hero Stats Bar (Visible Immediately) */
+.hero-stats {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--bg-card);
-  padding: 1.75rem 2.5rem;
-  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  max-width: 620px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero-stats-full:hover {
-  border-color: var(--accent-blue);
-  transform: translateY(-2px);
-}
-
-.stat-box {
+.hero-stat-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .hero-stat-divider {
   width: 1px;
-  height: 48px;
+  height: 36px;
   background-color: var(--border-color);
 }
 
 .stat-number {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .stat-plus {
@@ -234,7 +227,7 @@ body {
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -499,13 +492,12 @@ footer {
 @media (max-width: 768px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    margin-bottom: 2rem;
   }
   
-  .hero-stats-full {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .hero-stat-divider {
